@@ -2,6 +2,8 @@
    GLOBAL STYLES & VARIABLES
    ======================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 :root {
   --black: #000000;
   --gold: #d4af37;
@@ -13,6 +15,7 @@
   
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-serif: 'Georgia', serif;
+  --font-luxury: 'Playfair Display', serif;
   
   --transition: all 0.3s ease;
   --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,6 +40,24 @@ body {
 }
 
 /* ========================================
+   CRITICAL RENDERING PATH - Prevent FOUC
+   ======================================== */
+
+#navbar-container {
+  min-height: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#footer-container {
+  background: var(--black);
+}
+
+#modal-container {
+  display: none;
+}
+
+/* ========================================
    UTILITY CLASSES
    ======================================== */
 
@@ -53,6 +74,7 @@ body {
   color: var(--black);
   margin-bottom: 15px;
   letter-spacing: -1px;
+  font-family: var(--font-luxury);
 }
 
 .section-subtitle {
@@ -130,7 +152,7 @@ body {
   font-weight: 400;
   color: var(--white);
   letter-spacing: 3px;
-  font-family: var(--font-serif);
+  font-family: var(--font-luxury);
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -298,7 +320,7 @@ body {
   margin-bottom: 20px;
   letter-spacing: 2px;
   line-height: 1.2;
-  font-family: var(--font-serif);
+  font-family: var(--font-luxury);
   text-transform: uppercase;
 }
 
@@ -373,7 +395,7 @@ body {
   color: var(--white);
   margin-bottom: 10px;
   letter-spacing: -1px;
-  font-family: var(--font-serif);
+  font-family: var(--font-luxury);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -443,6 +465,7 @@ body {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  font-family: var(--font-luxury);
 }
 
 .about-preview-content p {
@@ -508,6 +531,7 @@ body {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  font-family: var(--font-luxury);
 }
 
 .story-content p {
@@ -620,6 +644,7 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  font-family: var(--font-luxury);
 }
 
 .overlay-content p {
@@ -917,6 +942,7 @@ body {
   color: var(--black);
   margin-bottom: 10px;
   font-weight: 700;
+  font-family: var(--font-luxury);
 }
 
 .package-subtitle {
@@ -1157,6 +1183,7 @@ table tbody tr:hover {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: var(--font-luxury);
 }
 
 .mission-card p {
@@ -1238,6 +1265,7 @@ table tbody tr:hover {
   margin-top: 15px;
   font-weight: 700;
   letter-spacing: -0.3px;
+  font-family: var(--font-luxury);
 }
 
 .why-card p {
@@ -1273,6 +1301,7 @@ table tbody tr:hover {
   margin-bottom: 15px;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: var(--font-luxury);
 }
 
 .value-item p {
