@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .favicon-bg { fill: #000; }
+        .favicon-accent { fill: #d4af37; }
+      }
+      @media (prefers-color-scheme: light) {
+        .favicon-bg { fill: #fff; }
+        .favicon-accent { fill: #d4af37; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" class="favicon-bg"/>
+  
+  <!-- Outer Border Circle -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Inner decorative circle -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Top decoration - elegant swash -->
+  <path d="M 60 70 Q 100 50 140 70" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- SF Text - Serif, Elegant -->
+  <text x="100" y="115" font-family="Georgia, serif" font-size="68" font-weight="600" fill="#d4af37" text-anchor="middle" letter-spacing="3">SF</text>
+  
+  <!-- Decorative elements - Event styling motif -->
+  <g fill="#d4af37" opacity="0.8">
+    <!-- Left diamond accent -->
+    <polygon points="50,100 55,95 60,100 55,105"/>
+    <!-- Right diamond accent -->
+    <polygon points="150,100 145,95 140,100 145,105"/>
+  </g>
+  
+  <!-- Bottom decorative line -->
+  <line x1="65" y1="145" x2="135" y2="145" stroke="#d4af37" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Corner accents -->
+  <circle cx="35" cy="35" r="3" fill="#d4af37" opacity="0.6"/>
+  <circle cx="165" cy="35" r="3" fill="#d4af37" opacity="0.6"/>
+  <circle cx="35" cy="165" r="3" fill="#d4af37" opacity="0.6"/>
+  <circle cx="165" cy="165" r="3" fill="#d4af37" opacity="0.6"/>
+</svg>

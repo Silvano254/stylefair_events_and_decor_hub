@@ -1,0 +1,87 @@
+<div id="inquiryModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Event Inquiry</h2>
+      <button class="modal-close" id="closeModal">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <form id="inquiryForm" class="inquiry-form">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="name" required placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+254 7XX XXX XXX">
+        </div>
+
+        <div class="form-group">
+          <label for="eventType">Event Type *</label>
+          <select id="eventType" name="eventType" required>
+            <option value="">Select Event Type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Corporate">Corporate Event</option>
+            <option value="Birthday">Birthday Party</option>
+            <option value="Bridal Shower">Bridal Shower</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Interested In *</label>
+          <select id="service" name="service" required>
+            <option value="">Select Service</option>
+            <option value="Wedding Styling">Wedding Styling</option>
+            <option value="Corporate Events">Corporate Events</option>
+            <option value="Birthday Decor">Birthday Decor</option>
+            <option value="Bridal Showers">Bridal Showers</option>
+            <option value="Luxury Table Styling">Luxury Table Styling</option>
+            <option value="Full Event Planning">Full Event Planning</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" name="eventDate">
+        </div>
+
+        <div class="form-group">
+          <label for="guestCount">Guest Count</label>
+          <input type="number" id="guestCount" name="guestCount" placeholder="e.g., 150">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="City, Kenya">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Details</label>
+          <textarea id="message" name="message" placeholder="Tell us about your event vision..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Inquiry</button>
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="success-message" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>Your inquiry has been received. We'll contact you shortly with more information.</p>
+        <button type="button" id="closeSuccess" class="close-success-btn">Close</button>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <p>💬 Need urgent assistance? Call us at <a href="tel:+254799799345" style="color: var(--gold); text-decoration: none; font-weight: 600;">+254 799 799 345</a></p>
+    </div>
+  </div>
+</div>
