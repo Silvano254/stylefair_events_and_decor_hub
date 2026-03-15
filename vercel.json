@@ -5,19 +5,19 @@
     { "src": "frontend/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "backend/$1" },
-
-    { "src": "/", "dest": "frontend/pages/index.html" },
-    { "src": "/about", "dest": "frontend/pages/about.html" },
-    { "src": "/services", "dest": "frontend/pages/services.html" },
-    { "src": "/gallery", "dest": "frontend/pages/gallery.html" },
-    { "src": "/packages", "dest": "frontend/pages/packages.html" },
-    { "src": "/contact", "dest": "frontend/pages/contact.html" },
-
+    { "src": "/api/(.*)", "dest": "backend/api/$1.js" },
+    
     { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
     { "src": "/components/(.*)", "dest": "frontend/components/$1" },
-    { "src": "/services/(.*)", "dest": "frontend/services/$1" },
-    { "src": "/config/(.*)", "dest": "frontend/config/$1" }
+    
+    { "src": "^/about/?$", "dest": "frontend/pages/about.html" },
+    { "src": "^/services/?$", "dest": "frontend/pages/services.html" },
+    { "src": "^/gallery/?$", "dest": "frontend/pages/gallery.html" },
+    { "src": "^/packages/?$", "dest": "frontend/pages/packages.html" },
+    { "src": "^/contact/?$", "dest": "frontend/pages/contact.html" },
+    { "src": "^/$", "dest": "frontend/pages/index.html" },
+    
+    { "src": "/(.*)", "dest": "frontend/pages/404.html" }
   ],
   "env": {
     "NODE_ENV": "production"

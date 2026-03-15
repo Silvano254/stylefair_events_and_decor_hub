@@ -402,10 +402,11 @@ function openModalWithService(serviceName) {
 
 function initializeAOS() {
   AOS.init({
-    duration: 800,
+    duration: 600,
     easing: 'ease-in-out',
     once: true,
-    offset: 100
+    offset: 50,
+    delay: 0
   });
 }
 
