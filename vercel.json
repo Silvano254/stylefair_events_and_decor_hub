@@ -14,9 +14,13 @@
     { "src": "/packages", "dest": "frontend/pages/packages.html" },
     { "src": "/contact", "dest": "frontend/pages/contact.html" },
 
-    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" }
+    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
+    { "src": "/components/(.*)", "dest": "frontend/components/$1" },
+    { "src": "/services/(.*)", "dest": "frontend/services/$1" },
+    { "src": "/config/(.*)", "dest": "frontend/config/$1" }
   ],
   "env": {
     "NODE_ENV": "production"
   }
 }
+
