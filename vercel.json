@@ -1,16 +1,18 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    }
+    { "src": "backend/server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "backend/server.js"
-    }
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
+    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
+    { "src": "/js/(.*)", "dest": "frontend/assets/js/$1" },
+    { "src": "/css/(.*)", "dest": "frontend/assets/css/$1" },
+    { "src": "/images/(.*)", "dest": "frontend/assets/images/$1" },
+    { "src": "/vendor/(.*)", "dest": "frontend/assets/vendor/$1" },
+    { "src": "/(about|contact|gallery|packages|services).html", "dest": "frontend/pages/$1.html" },
+    { "src": "/", "dest": "frontend/pages/index.html" },
+    { "src": "/(.*)", "dest": "frontend/pages/index.html" }
   ],
   "env": {
     "NODE_ENV": "production"
